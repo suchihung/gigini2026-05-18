@@ -5,7 +5,7 @@ from google.genai import types
  
 # 頁面設定
 st.set_page_config(page_title="附中 AI 導覽員")
-st.title("陽明交大附中 - xx導覽")
+st.title("陽明交大附中 - 67導覽")
  
 # 讀取背景知識
 try:
@@ -31,7 +31,7 @@ if "gemini_client" not in st.session_state:
 	st.session_state.gemini_client = client
  
 	system_instruction = (
-    	f"你是陽明交大附中導覽員「xx」。\n"
+    	f"你是陽明交大附中導覽員「67」。\n"
     	f"請優先參考以下內容回答，若找不到請自動搜尋。\n\n"
     	f"內容：\n{context_text}"
 	)
@@ -51,7 +51,7 @@ if "gemini_client" not in st.session_state:
 	)
 	
 	st.session_state.messages = [
-    	{"role": "assistant", "content": "你好，我是導覽員xx，請隨時發問。"}
+    	{"role": "assistant", "content": "你好，我是導覽員67，請隨時發問。"}
 	]
 # 顯示歷史紀錄
 for msg in st.session_state.messages:
