@@ -63,7 +63,7 @@ if prompt := st.chat_input("想問什麼事"):
 	st.chat_message("user").write(prompt)
 	st.session_state.messages.append({"role": "user", "content": prompt})
 
-with st.spinner("處理中"):
+	with st.spinner("處理中"):
     	try:
         	response = st.session_state.chat_session.send_message(prompt)
         	response_text = response.text
